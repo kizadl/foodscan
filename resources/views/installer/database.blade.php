@@ -20,9 +20,6 @@
         <li onclick="handleLinkForInstaller('{{ route('installer.permission') }}')" class="done">
             <i class="fa-sharp fa-solid fa-unlock"></i>
         </li>
-        <li onclick="handleLinkForInstaller('{{ route('installer.license') }}')" class="done">
-            <i class="fa-solid fa-key"></i>
-        </li>
         <li onclick="handleLinkForInstaller('{{ route('installer.site') }}')" class="done">
             <i class="fa-solid fa-gear"></i>
         </li>
@@ -48,10 +45,9 @@
                 {{ trans('installer.database.label.database_host') }} <span class="text-[#E93C3C]">*</span>
             </label>
             <input name="database_host" value="{{ old('database_host', 'localhost') }}" type="text"
-                   class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
+                class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
             @if ($errors->has('database_host'))
-                <small
-                    class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_host') }}</small>
+                <small class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_host') }}</small>
             @endif
         </div>
 
@@ -60,10 +56,9 @@
                 {{ trans('installer.database.label.database_port') }} <span class="text-[#E93C3C]">*</span>
             </label>
             <input name="database_port" value="{{ old('database_port', '3306') }}" type="text"
-                   class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
+                class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
             @if ($errors->has('database_port'))
-                <small
-                    class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_port') }}</small>
+                <small class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_port') }}</small>
             @endif
         </div>
 
@@ -72,10 +67,9 @@
                 {{ trans('installer.database.label.database_name') }} <span class="text-[#E93C3C]">*</span>
             </label>
             <input name="database_name" value="{{ old('database_name') }}" type="text"
-                   class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
+                class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
             @if ($errors->has('database_name'))
-                <small
-                    class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_name') }}</small>
+                <small class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_name') }}</small>
             @endif
         </div>
 
@@ -84,10 +78,9 @@
                 {{ trans('installer.database.label.database_username') }} <span class="text-[#E93C3C]">*</span>
             </label>
             <input name="database_username" value="{{ old('database_username') }}" type="text"
-                   class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
+                class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
             @if ($errors->has('database_username'))
-                <small
-                    class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_username') }}</small>
+                <small class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_username') }}</small>
             @endif
         </div>
 
@@ -96,15 +89,14 @@
                 {{ trans('installer.database.label.database_password') }} <span class="text-[#E93C3C]">*</span>
             </label>
             <input name="database_password" value="{{ old('database_password') }}" type="text"
-                   class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
+                class="w-full h-12 rounded-lg px-4 border border-[#D9DBE9]">
             @if ($errors->has('database_password'))
-                <small
-                    class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_password') }}</small>
+                <small class="block mt-2 text-sm font-medium text-[#E93C3C]">{{ $errors->first('database_password') }}</small>
             @endif
         </div>
 
         <button type="submit"
-                class="w-fit mx-auto p-3 px-6 rounded-lg flex items-center justify-center gap-3 bg-primary text-white">
+            class="w-fit mx-auto p-3 px-6 rounded-lg flex items-center justify-center gap-3 bg-primary text-white">
             <span class="text-sm font-medium capitalize">{{ trans('installer.database.next') }}</span>
             <i class="fa-solid fa-angle-right text-sm"></i>
         </button>

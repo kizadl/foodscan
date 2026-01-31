@@ -19,9 +19,6 @@
         <li onclick="handleLinkForInstaller('{{ route('installer.permission') }}')" class="done">
             <i class="fa-sharp fa-solid fa-unlock"></i>
         </li>
-        <li onclick="handleLinkForInstaller('{{ route('installer.license') }}')" class="done">
-            <i class="fa-solid fa-key"></i>
-        </li>
         <li onclick="handleLinkForInstaller('{{ route('installer.site') }}')" class="done">
             <i class="fa-solid fa-gear"></i>
         </li>
@@ -44,7 +41,8 @@
         </div>
     @endif
     <dl class="w-full max-w-sm mx-auto mb-8 rounded-lg bg-[#F7F7FC]">
-        <dt class="text-sm font-medium py-3 px-4 border-b border-[#D9DBE9] text-heading">{{ trans('installer.final.login_info') }}</dt>
+        <dt class="text-sm font-medium py-3 px-4 border-b border-[#D9DBE9] text-heading">
+            {{ trans('installer.final.login_info') }}</dt>
         <dd class="py-1.5 px-4">
             <div class="text-sm text-heading py-1.5">
                 <span class="w-20">{{ trans('installer.final.email') }}:</span>
@@ -59,7 +57,7 @@
 
     <div class="text-center">
         <a href="{{ route('installer.finalStore') }}"
-           class="p-3 px-6 rounded-lg inline-flex items-center justify-center gap-3 bg-primary text-white">
+            class="p-3 px-6 rounded-lg inline-flex items-center justify-center gap-3 bg-primary text-white">
             {{ trans('installer.final.next') }}
             <i class="fa-solid fa-angle-right text-sm"></i>
         </a>

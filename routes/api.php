@@ -19,7 +19,7 @@ use App\Http\Controllers\Auth\SignupController;
 use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\WaiterController;
 use App\Http\Controllers\Admin\CompanyController;
-use App\Http\Controllers\Admin\LicenseController;
+
 use App\Http\Controllers\Admin\AnalyticController;
 use App\Http\Controllers\Admin\CurrencyController;
 use App\Http\Controllers\Admin\CustomerController;
@@ -224,10 +224,7 @@ Route::prefix('admin')->name('admin.')->middleware(['installed', 'apiKey', 'auth
             Route::delete('/{page}', [PageController::class, 'destroy']);
         });
 
-        Route::prefix('license')->name('license.')->group(function () {
-            Route::get('/', [LicenseController::class, 'index']);
-            Route::match(['put', 'patch'], '/', [LicenseController::class, 'update']);
-        });
+
 
         Route::prefix('theme')->name('theme.')->group(function () {
             Route::get('/', [ThemeController::class, 'index']);

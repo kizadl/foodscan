@@ -17,7 +17,6 @@
             <i class="fa-solid fa-server"></i>
         </li>
         <li class="active"><i class="fa-sharp fa-solid fa-unlock"></i></li>
-        <li><i class="fa-solid fa-key"></i></li>
         <li><i class="fa-solid fa-gear"></i></li>
         <li><i class="fa-solid fa-database"></i></li>
         <li><i class="fa-solid fa-unlock-keyhole"></i></li>
@@ -31,15 +30,17 @@
         </li>
         @foreach($permissions['permissions'] as $permission)
             <li class="flex items-center justify-between py-3.5 px-6 border-b border-[#EFF0F6] last:border-none">
-                <span class="text-sm font-medium text-heading">{{ $permission['folder'] }} - {{ $permission['permission'] }}</span>
-                <i class="fa-solid fa-{{ $permission['isSet'] ? 'check-circle' : 'exclamation-circle' }} circle-check text-sm text-[#{{ $permission['isSet'] ? '1AB759' : 'E93C3C' }}]"></i>
+                <span class="text-sm font-medium text-heading">{{ $permission['folder'] }} -
+                    {{ $permission['permission'] }}</span>
+                <i
+                    class="fa-solid fa-{{ $permission['isSet'] ? 'check-circle' : 'exclamation-circle' }} circle-check text-sm text-[#{{ $permission['isSet'] ? '1AB759' : 'E93C3C' }}]"></i>
             </li>
         @endforeach
     </ul>
 
-    @if ( ! isset($permissions['errors']))
-        <a href="{{ route('installer.license') }}"
-           class="w-fit mx-auto p-3 px-6 rounded-lg flex items-center justify-center gap-3 bg-primary text-white">
+    @if (!isset($permissions['errors']))
+        <a href="{{ route('installer.site') }}"
+            class="w-fit mx-auto p-3 px-6 rounded-lg flex items-center justify-center gap-3 bg-primary text-white">
             <span class="text-sm font-medium capitalize">{{ trans('installer.permission.next') }}</span>
             <i class="fa-solid fa-angle-right text-sm"></i>
         </a>

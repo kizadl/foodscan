@@ -34,7 +34,6 @@ class DatabaseSeeder extends Seeder
         $this->call(OrderSetupTableSeeder::class);
         $this->call(OtpTableSeeder::class);
         $this->call(ThemeTableSeeder::class);
-        $this->call(LicenseTableSeeder::class);
         $this->call(SocialMediaTableSeeder::class);
         $this->call(TaxTableSeeder::class);
         $this->call(PageTableSeeder::class);

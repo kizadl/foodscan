@@ -21,7 +21,6 @@ import { administrator } from "./modules/administrator";
 import { defaultAccess } from "./modules/defaultAccess";
 import { administratorAddress } from "./modules/administratorAddress";
 import { customerAddress } from "./modules/customerAddress";
-import { license } from "./modules/license";
 import { analytic } from "./modules/analytic";
 import { analyticSection } from "./modules/analyticSection";
 import { role } from "./modules/role";
@@ -99,7 +98,6 @@ export default new createStore({
         administrator,
         defaultAccess,
         administratorAddress,
-        license,
         analytic,
         analyticSection,
         role,
